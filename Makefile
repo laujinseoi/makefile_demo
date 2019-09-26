@@ -1,5 +1,7 @@
-demo : main.o foo.o fun.o
-	g++ -o demo main.o foo.o fun.o
+objects = main.o foo.o fun.o
+
+demo : $(objects)
+	g++ -o demo $(objects)
 
 main.o : main.cpp
 	g++ -c main.cpp
