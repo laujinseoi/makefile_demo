@@ -9,5 +9,6 @@ foo.o : foo.h
 
 fun.o : fun.h
 
-clean:
-	rm demo main.o foo.o fun.o
+.PHONY : clean
+clean :
+	-rm demo main.o foo.o fun.o
