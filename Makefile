@@ -3,14 +3,11 @@ objects = main.o foo.o fun.o
 demo : $(objects)
 	g++ -o demo $(objects)
 
-main.o : main.cpp
-	g++ -c main.cpp
+main.o : 
 
-foo.o : foo.cpp foo.h
-	g++ -c foo.cpp
+foo.o : foo.h
 
-fun.o : fun.cpp fun.h
-	g++ -c fun.cpp
+fun.o : fun.h
 
 clean:
 	rm demo main.o foo.o fun.o
